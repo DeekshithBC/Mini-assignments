@@ -1,0 +1,12 @@
+C:\Users\deekshith.bc\source\repos\Electronics\bin\Debug\en-us\Electronics.msi
+C:\Users\deekshith.bc\source\repos\Electronics\bin\Debug\en-us\Electronics.wixpdb
+obj\Debug\Directory.wixobj
+obj\Debug\Product.wixobj
+obj\Debug\Electronics.wixproj.BindContentsFileListen-us.txt
+obj\Debug\Electronics.wixproj.BindOutputsFileListen-us.txt
+obj\Debug\Electronics.wixproj.BindBuiltOutputsFileListen-us.txt
+obj\Debug\components.wixobj
+obj\Debug\new components.wixobj
+obj\Debug\service.wixobj
+obj\Debug\Environmemt.wixobj
+obj\Debug\mergemodule.wixobj

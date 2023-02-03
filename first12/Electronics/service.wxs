@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+	<Fragment>
+
+		<ComponentGroup Id="NewProductComponents" Directory="INSTALLFOLDER">
+
+			<Component
+			Id="CMP_WindowsService1"
+			Guid="{F0C1882A-17CE-43AE-B959-4AE869C0A751}">
+				<File
+				Id="WindowsService1.exe"
+				Name="Thermo.CMDI.IpcCommunications.Client.exe"
+				KeyPath="yes"
+				Source="Files/$(env.Exe)" />
+				<ServiceInstall
+				Id="InstallWindowsService1"
+				Name="testsvc"
+				DisplayName="Proxy_Client"
+				Start="auto"
+				ErrorControl="normal"
+			   Type="ownProcess" />
+				
+
+			</Component>
+		</ComponentGroup>
+	</Fragment>
+</Wix>

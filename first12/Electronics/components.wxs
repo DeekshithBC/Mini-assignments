@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+	<Fragment>
+		<ComponentGroup Id="ProductComponents" Directory="CmpFOLDER">
+
+			<Component Id="Electronics.exe" Guid="{F469E9BA-9287-4585-A32E-FB840CF4B5C6}">
+				<File Id="Electronics.exe" Name="Sample Application.exe" Source="Files\Sample Application.exe" />
+
+				<RemoveFile Id="ALLFILES" Name="*.*" On="both" />
+			</Component>
+
+			<Component Id="Sample_Application.exe.config" Guid="{2D7DEAF4-2722-4617-9CA9-EE5DB13DF79A}">
+				<File Id="Electronic.exe.config" Name="Sample.exe.config" Source="Files\Sample Application.exe.config" />
+			</Component>
+		</ComponentGroup>
+	</Fragment>
+
+	<Fragment>
+		<DirectoryRef Id="ApplicationProgramsFolder">
+
+			<Component Id="ApplicationShortcut" Guid="{C209875C-7DA0-4D79-9684-5BFE04D625DA}">
+				<Shortcut Id="ApplicationStartMenuShortcut" Name="Electronics" Description="electronics and coommnication" Icon="thermo.ico" Target="[#Electronics.exe]"  WorkingDirectory="INSTALLFOLDER" />
+
+				<RemoveFolder Id="ApplicationProgramsFolder" On="uninstall" />
+
+				<RegistryValue Root="HKCU" Key="Software\Microsoft\dsatm\Electronics" Name="installed" Type="integer" Value="1" KeyPath="yes" />
+			</Component>
+		</DirectoryRef>
+	</Fragment>
+
+	<Fragment>
+		<!--Desktop Shortcut-->
+		<ComponentGroup Id="ComponentGroupDesktopShortcut">
+			<Component Id="ComponentDesktopShortcut" Guid="{F06D1FE8-21E1-46A9-9042-6CA0DFF1C2B1}" Directory="DesktopFolder" >
+				<Shortcut Id="AppDesktopShortcut"
+						  Icon="thermo.ico"  Name="Electronics"
+						  Description="electronic and communication"
+						  Target="[#Electronics.exe]"
+						  Directory="DesktopFolder"
+						  
+						  WorkingDirectory="INSTALLFOLDER"/>
+				<!--Remove desktop shortcut on uninstall-->
+				<RemoveFolder Id="DesktopFolder" On="uninstall"/>
+				<RegistryValue Root="HKCU" Key="Software\dsatm\Electronics" Name="installed" Type="integer" Value="1" KeyPath="yes" />
+			</Component>
+		</ComponentGroup>
+	</Fragment>
+
+
+</Wix>

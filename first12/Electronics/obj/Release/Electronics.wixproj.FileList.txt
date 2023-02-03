@@ -1,0 +1,8 @@
+obj\Release\File1.wixobj
+obj\Release\File2.wixobj
+obj\Release\Product.wixobj
+C:\Users\deekshith.bc\source\repos\Electronics\bin\Release\en-us\Electronics.msi
+C:\Users\deekshith.bc\source\repos\Electronics\bin\Release\en-us\Electronics.wixpdb
+obj\Release\Electronics.wixproj.BindContentsFileListen-us.txt
+obj\Release\Electronics.wixproj.BindOutputsFileListen-us.txt
+obj\Release\Electronics.wixproj.BindBuiltOutputsFileListen-us.txt

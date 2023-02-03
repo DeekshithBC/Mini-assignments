@@ -1,0 +1,6 @@
+C:\Users\deekshith.bc\source\repos\first12\bin\Debug\first12.msi
+C:\Users\deekshith.bc\source\repos\first12\bin\Debug\first12.wixpdb
+obj\Debug\Product.wixobj
+obj\Debug\first12.wixproj.BindContentsFileListnull.txt
+obj\Debug\first12.wixproj.BindOutputsFileListnull.txt
+obj\Debug\first12.wixproj.BindBuiltOutputsFileListnull.txt

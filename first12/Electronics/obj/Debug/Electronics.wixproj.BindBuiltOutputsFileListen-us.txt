@@ -1,0 +1,2 @@
+C:\Users\deekshith.bc\source\repos\Electronics\bin\Debug\en-us\Electronics.msi
+C:\Users\deekshith.bc\source\repos\Electronics\bin\Debug\en-us\Electronics.wixpdb

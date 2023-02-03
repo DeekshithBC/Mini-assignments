@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+	    
+	<?include Include1.wxi ?>
+	<!-- define the main product-->
+	<Product Id="{65187CB4-B710-4653-BED3-6BC6C0220112}"
+			 Name="!(loc.Name)"
+		Language="!(loc.Language)"
+		Version="$(var.Version)"
+			 Manufacturer="!(loc.Manufacturer)"
+		UpgradeCode="$(var.UpgradeCode)">
+		
+		
+	
+	      <!--provides a package details-->
+	<Package InstallerVersion="200" 
+				 Compressed="yes" 
+	InstallScope="perMachine"
+	Manufacturer="!(loc.Manufacturer)"/>
+
+
+			   <!--Application logo-->
+<Icon Id="thermo.ico" 
+	  SourceFile="C:\Users\deekshith.bc\source\repos\Electronics\Resources\thermo.ico" />
+	     <!--Application logo for Control Panel-->
+<Property Id="ARPPRODUCTICON" 
+		  Value="thermo.ico" />
+		<!-- Allow upgrades and prevent downgrades -->
+<MajorUpgrade AllowDowngrades="yes"/>
+		<!--Embed Cabinet into single msi file-->
+<Media Id="1" Cabinet="comm" EmbedCab="yes" />
+
+       <!-- Check if .Net Framework 4.5.2 version is installed or not. If not show message and exit-->
+<PropertyRef Id="WIX_IS_NETFRAMEWORK_452_OR_LATER_INSTALLED" />
+<Condition Message="This application requires .NET Framework 4.5.2 Please install the .NET Framework then run this installer again.">
+			<![CDATA[Installed OR WIX_IS_NETFRAMEWORK_452_OR_LATER_INSTALLED]]>
+</Condition>
+      <!--Main Feature for this Setup which can be found in Fragment Tag with ComponentGroupRef Id-->
+
+
+		<Feature Id="ProductFeature" Title="!(loc.Name)" Level="1">
+			<Feature Id="SampleFeature"/>
+				<ComponentGroupRef Id="SampleComponentGroup" />
+			<ComponentRef Id='MainExecutable'/>
+
+			<!--Main application executable component-->
+				<ComponentGroupRef Id="ProductComponents" />
+			<ComponentGroupRef Id="ElectronicsComponent"/>
+				<!--Main application shortcut for Program Menu-->
+				<ComponentRef Id="ApplicationShortcut" />
+				<!--Desktop shortcut-->
+				<ComponentGroupRef Id="ComponentGroupDesktopShortcut" />
+			<ComponentGroupRef Id="NewProductComponents" />
+
+			<MergeRef Id="merge" />
+			</Feature>
+			<!-- Add CheckBox UI to your installer for running application on exit-->
+	
+
+		
+	 <!--Custom UI for installer-->
+	<Property Id="WIXUI_INSTALLDIR" Value="INSTALLFOLDER" />
+		<UIRef Id="WixUI_InstallDir" />
+
+		<WixVariable Id="WixUILicenseRtf"  Value="Resources\License.rtf" />
+	 <!--Top Banner UI Logo-->
+		<WixVariable Id="WixUIBannerBmp"  Value="Resources\installer_background.bmp" />
+		<!--Verticle Banner UI Logo-->
+		<WixVariable Id="WixUIDialogBmp"  Value="Resources\installer_images.bmp" />
+		
+	</Product>
+	
+</Wix>

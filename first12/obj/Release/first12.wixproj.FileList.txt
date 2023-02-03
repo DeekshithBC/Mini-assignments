@@ -1,0 +1,6 @@
+C:\Users\deekshith.bc\source\repos\first12\bin\Release\first12.msi
+C:\Users\deekshith.bc\source\repos\first12\bin\Release\first12.wixpdb
+obj\Release\Product.wixobj
+obj\Release\first12.wixproj.BindContentsFileListnull.txt
+obj\Release\first12.wixproj.BindOutputsFileListnull.txt
+obj\Release\first12.wixproj.BindBuiltOutputsFileListnull.txt

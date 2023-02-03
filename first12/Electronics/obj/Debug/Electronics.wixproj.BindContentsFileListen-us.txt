@@ -1,0 +1,37 @@
+C:\Users\deekshith.bc\AppData\Local\Temp\x5vlggt5\MergeId.25088\abc.175A50CA_5130_402A_A825_CFA13174EE27
+C:\Users\deekshith.bc\AppData\Local\Temp\x5vlggt5\MergeId.25088\abc.exe.config.175A50CA_5130_402A_A825_CFA13174EE27
+C:\Users\deekshith.bc\AppData\Local\Temp\x5vlggt5\MergeId.25088\abc.pdb.175A50CA_5130_402A_A825_CFA13174EE27
+Files\Sample Application.exe.config
+Files\Sample Application.exe
+LPC\System.ServiceProcess.ServiceController.dll
+LPC\launch.bat
+LPC\Serilog.Sinks.File.dll
+LPC\Serilog.dll
+LPC\Serilog.AspNetCore.dll
+LPC\Grpc.AspNetCore.Server.dll
+LPC\Serilog.Settings.Configuration.dll
+LPC\Thermo.CMDI.IpcCommunications.Common.dll
+LPC\Thermo.CMDI.IpcCommunications.Client.dll
+LPC\Serilog.Extensions.Logging.dll
+LPC\Grpc.Net.Common.dll
+LPC\Google.Protobuf.dll
+LPC\Grpc.Net.Client.dll
+LPC\Thermo.CMDI.IpcCommunications.Common.pdb
+LPC\SimpleBase.dll
+LPC\Grpc.Net.ClientFactory.dll
+LPC\Microsoft.AspNetCore.Mvc.Versioning.dll
+LPC\Thermo.CMDI.IpcCommunications.Client.runtimeconfig.json
+LPC\appsettings.json
+LPC\Thermo.CMDI.IpcCommunications.Client.deps.json
+LPC\Thermo.CMDI.IpcCommunications.Client.pdb
+LPC\Serilog.Sinks.Debug.dll
+LPC\Serilog.Sinks.Console.dll
+LPC\appsettings.Development.json
+LPC\Serilog.Formatting.Compact.dll
+LPC\Serilog.Extensions.Hosting.dll
+LPC\Grpc.AspNetCore.Server.ClientFactory.dll
+LPC\Microsoft.Extensions.Hosting.WindowsServices.dll
+LPC\Grpc.Core.Api.dll
+LPC\Microsoft.Extensions.DependencyModel.dll
+C:\Users\deekshith.bc\AppData\Local\Temp\x5vlggt5\cab_1_MySetupLibrary\0
+Files/Thermo.CMDI.IpcCommunications.Client.exe

@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+    <Product Id="{22849F2C-C9C2-47EA-904D-18B98A515AE1}" Language="1033" Manufacturer="Thermo Fisher Scientific, Inc." Name="first12" UpgradeCode="{6A3D1820-D73D-445B-8BB8-03872B2249F0}" Version="1.0.0.0">
+        <Package Comments="This installer database contains the logic and data required to install first12." Compressed="yes" Description="first12" InstallerVersion="200" Languages="1033" Manufacturer="Thermo Fisher Scientific, Inc." Platform="x86" />
+        <Directory Id="TARGETDIR" Name="SourceDir">
+            <Directory Id="DesktopFolder" Name="Desktop">
+                <Component Id="ApplicationShortcutDesktop" Guid="{CDE1E030-EB64-49A5-B7B8-400B379C2D1A}">
+                    <RegistryValue Id="regB643DE6C490505FFC048E54BE2FC6F6D" Root="HKCU" Key="Software\first12" Name="installed" Value="1" Type="integer" KeyPath="yes" />
+                    <RemoveFolder Id="RemoveDesktopFolder" Directory="DesktopFolder" On="uninstall" />
+                    <Shortcut Id="ApplicationDesktopShortcut" Directory="DesktopFolder" Name="first12" Description="first12" WorkingDirectory="INSTALLFOLDER" Advertise="yes" />
+                </Component>
+            </Directory>
+            <Directory Id="ProgramFilesFolder">
+                <Directory Id="INSTALLFOLDER" Name="first12" />
+            </Directory>
+            <Directory Id="ProgramMenuFolder">
+                <Directory Id="ApplicationProgramsFolder" Name="first12">
+                    <Component Id="ApplicationShortcut" Guid="{9BD13330-6540-406F-A3A8-D7F7C69AE7F9}">
+                        <RegistryValue Id="reg273C7D674E0AFDAE89942C975CDE4218" Root="HKCU" Key="Software\first12" Name="installed" Value="1" Type="integer" KeyPath="yes" />
+                        <RemoveFolder Id="RemoveApplicationProgramsFolder" Directory="ApplicationProgramsFolder" On="uninstall" />
+                        <Shortcut Id="ApplicationStartMenuShortcut" Directory="ApplicationProgramsFolder" Name="first12" Description="first12" WorkingDirectory="INSTALLFOLDER" Advertise="yes" />
+                    </Component>
+                </Directory>
+            </Directory>
+        </Directory>
+        <Feature Id="ProductFeature" Level="1" Title="first12">
+            <ComponentRef Id="ApplicationShortcut" />
+            <ComponentRef Id="ApplicationShortcutDesktop" />
+        </Feature>
+        <MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." Schedule="afterInstallValidate" />
+        <Property Id="ALLUSERS" Value="1" />
+        <Property Id="WIX_DOWNGRADE_DETECTED" Secure="yes" />
+        <Property Id="WIX_UPGRADE_DETECTED" Secure="yes" />
+    </Product>
+</Wix>
