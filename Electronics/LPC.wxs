@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+    <Fragment>
+        <DirectoryRef Id="INSTALLFOLDER">
+            <Component Id="cmpA0863526952F7834E7C922F065E4C8A8" Guid="{21A78E37-F5B7-4727-9AE9-9D6CB24C5EAF}">
+                <File Id="filC04B02D0CCC2D5CCC1013B35DE86DB29" KeyPath="yes" Source="$(var.LPCFolder)\appsettings.Development.json" />
+            </Component>
+            <Component Id="cmpF82FCA80BBAF44D285C97F10993DEEE6" Guid="{55B41CB4-E38F-4760-922E-B1DAF62B5DD5}">
+                <File Id="fil840B80AC19861C7F9F04FBDCFAE331CE" KeyPath="yes" Source="$(var.LPCFolder)\appsettings.json" />
+            </Component>
+            <Component Id="cmp2B62C064A3ED6A94B47BE64C5EB82D9E" Guid="{272C9C88-FA7C-4440-ADC4-A87E73857AC1}">
+                <File Id="fil627F933A2694B1BED9FD06B5FDD52C93" KeyPath="yes" Source="$(var.LPCFolder)\Google.Protobuf.dll" />
+            </Component>
+            <Component Id="cmpAD5EBB392A1420D45D001D2850650946" Guid="{0F88ABA7-1408-4FC8-81DA-3E8FF02973CF}">
+                <File Id="filEE9BA4D96BE0093FF4E7CEA4BE7BE34B" KeyPath="yes" Source="$(var.LPCFolder)\Grpc.AspNetCore.Server.ClientFactory.dll" />
+            </Component>
+            <Component Id="cmp332F189ABE775FB6B2F44FCB7028B9C6" Guid="{EB9105C8-24E8-45C3-8E23-10C4B629E40D}">
+                <File Id="fil2A0E9EDA788BA4ED9847D51516B16EBE" KeyPath="yes" Source="$(var.LPCFolder)\Grpc.AspNetCore.Server.dll" />
+            </Component>
+            <Component Id="cmp7530465017BB74DDEEFF284B43AFA164" Guid="{3629582F-0A00-4F1A-AA8F-79C4D18986BC}">
+                <File Id="filF3F51DFF9B4F49FA9BB94AD074AA7F28" KeyPath="yes" Source="$(var.LPCFolder)\Grpc.Core.Api.dll" />
+            </Component>
+            <Component Id="cmp301336F2D44076B758CAAEAEFFD98B4B" Guid="{2BB6835E-7F31-404F-B4FD-43F3DF40E5D2}">
+                <File Id="fil645F9138B236FAA537DC09760E5BB73A" KeyPath="yes" Source="$(var.LPCFolder)\Grpc.Net.Client.dll" />
+            </Component>
+            <Component Id="cmp3F2D05E350EB9478FD924CAC5B831615" Guid="{8DAE2C93-4D89-473E-AA8C-D7C80DB70A1A}">
+                <File Id="fil7C198514ED939410623816809E79B976" KeyPath="yes" Source="$(var.LPCFolder)\Grpc.Net.ClientFactory.dll" />
+            </Component>
+            <Component Id="cmpD5921CC73D3D7D96B18ADAC140DDDBF5" Guid="{EA6CFC91-20B7-43C5-8C88-930DCBBD2E31}">
+                <File Id="fil61C6E628E74343C95130875F07EFF332" KeyPath="yes" Source="$(var.LPCFolder)\Grpc.Net.Common.dll" />
+            </Component>
+            <Component Id="cmp4FDAF4C5B0BA3EB0A9736F58F6BE9C14" Guid="{867E333B-BB1D-4237-95A7-4ADA2D927451}">
+                <File Id="fil0FE55D877EEDFAE91FC60BF90EF49765" KeyPath="yes" Source="$(var.LPCFolder)\launch.bat" />
+            </Component>
+            <Component Id="cmp81015F934149FC8877A7F508324F01AF" Guid="{54818555-8999-4D96-8710-5A278B5F1EE8}">
+                <File Id="fil7DB2AFC3DDCC42180A1B18E20FF48983" KeyPath="yes" Source="$(var.LPCFolder)\Microsoft.AspNetCore.Mvc.Versioning.dll" />
+            </Component>
+            <Component Id="cmp828BABCAA179DFEF8C123894E628FE4B" Guid="{209E476A-6B99-44B0-8D27-FC4A16681ACA}">
+                <File Id="filF6E569B7A4467871DC459846AD8CAB0C" KeyPath="yes" Source="$(var.LPCFolder)\Microsoft.Extensions.DependencyModel.dll" />
+            </Component>
+            <Component Id="cmpFD16E629F3B1C17887ACD3B97583CB13" Guid="{35F27A04-8436-426E-ADD5-7492B1E59C93}">
+                <File Id="filEFB595E81CA62CF58EF39208C76F7F06" KeyPath="yes" Source="$(var.LPCFolder)\Microsoft.Extensions.Hosting.WindowsServices.dll" />
+            </Component>
+            <Component Id="cmp6F76674123E31ADA0CB0373827395329" Guid="{CA431E30-B5A7-4FED-8893-5986E9FAE12C}">
+                <File Id="fil24340B036E07AE74D4CB0089D07A83D2" KeyPath="yes" Source="$(var.LPCFolder)\Serilog.AspNetCore.dll" />
+            </Component>
+            <Component Id="cmp74A2C73F11C177073B0A672936A0D5EB" Guid="{28C08DBE-74B0-4AA6-8C1F-B4DEC51DF3EA}">
+                <File Id="fil1CF141D24266A4E5F331DDFE02166A27" KeyPath="yes" Source="$(var.LPCFolder)\Serilog.dll" />
+            </Component>
+            <Component Id="cmp214710B2088B640AA2C8ECD80E170376" Guid="{E89B1780-6C2C-4C6B-B3ED-B4EA387F7CE8}">
+                <File Id="filE72D6FFBC556E18D146AC0CA92CF450B" KeyPath="yes" Source="$(var.LPCFolder)\Serilog.Extensions.Hosting.dll" />
+            </Component>
+            <Component Id="cmpA9CD02E2996345805AE749B403FD0E7A" Guid="{18667132-591C-4A7E-85C4-F94662F95004}">
+                <File Id="fil56CB5FAFD9298B97D060AE19F2DB1B10" KeyPath="yes" Source="$(var.LPCFolder)\Serilog.Extensions.Logging.dll" />
+            </Component>
+            <Component Id="cmpC08CEB1C24E4A6DA79EE83CFD8BDCD60" Guid="{A752B2C5-3906-4891-B3D7-30026E6E2C8A}">
+                <File Id="filD89F64F083730E2B8CC0DEE7002EF506" KeyPath="yes" Source="$(var.LPCFolder)\Serilog.Formatting.Compact.dll" />
+            </Component>
+            <Component Id="cmp0E9DAA4C1F27CA840B7893F6337CDC29" Guid="{46FA35ED-C330-4A03-BADD-A3F04F5B1678}">
+                <File Id="fil3908D6B667B492BF06F390753E52341D" KeyPath="yes" Source="$(var.LPCFolder)\Serilog.Settings.Configuration.dll" />
+            </Component>
+            <Component Id="cmp539EB192BE11EA8C5B17EFB0CC1DDCEB" Guid="{09C498A9-0BD1-4003-AF33-C6B575E55BD4}">
+                <File Id="filB637049630FB5D2AC00236DBD60DD2BE" KeyPath="yes" Source="$(var.LPCFolder)\Serilog.Sinks.Console.dll" />
+            </Component>
+            <Component Id="cmp54D178BF4B123B0F7249047E7AA7FE7F" Guid="{A5683F44-3859-4DC9-838B-ECA559A93A78}">
+                <File Id="filB1D7D8DE3D3E218CF70D1265B59FC7F6" KeyPath="yes" Source="$(var.LPCFolder)\Serilog.Sinks.Debug.dll" />
+            </Component>
+            <Component Id="cmp49818C715FF04B8E95F7B53BDDD323EF" Guid="{956FC094-9425-485C-AFAD-CCB10D22087B}">
+                <File Id="fil1A12B15365165DDBE60433B150808BEE" KeyPath="yes" Source="$(var.LPCFolder)\Serilog.Sinks.File.dll" />
+            </Component>
+            <Component Id="cmp76AAA44D1FCBC2976B84875F1F6EFC4C" Guid="{507CAD9B-BB36-490D-B7E9-DD02DF44F1A8}">
+                <File Id="fil69789C9B37EB1FE4735CB166B08D6A08" KeyPath="yes" Source="$(var.LPCFolder)\SimpleBase.dll" />
+            </Component>
+            <Component Id="cmp3C5190B580EDFB87D0BC5E835BB950DE" Guid="{042D52B1-CF3C-4A12-953E-51AD9A36EB96}">
+                <File Id="fil0B6369FF78F990F18A525D5F0CC6D1AB" KeyPath="yes" Source="$(var.LPCFolder)\System.ServiceProcess.ServiceController.dll" />
+            </Component>
+            <Component Id="cmp441B2521942CD82440C070D7FF9F0E80" Guid="{5C4DE10E-79F8-4F67-B868-CC49622EE782}">
+                <File Id="fil898D4EE9368003E930190207E27F6549" KeyPath="yes" Source="$(var.LPCFolder)\Thermo.CMDI.IpcCommunications.Client.deps.json" />
+            </Component>
+            <Component Id="cmp4BEE6BBF5C4B4A85E402D73F039EE742" Guid="{CE11EC10-3FC1-49CD-87DF-B510A69D58A6}">
+                <File Id="fil52211F23379D38A619F3E198F6D92369" KeyPath="yes" Source="$(var.LPCFolder)\Thermo.CMDI.IpcCommunications.Client.dll" />
+            </Component>
+            <Component Id="cmpD5E85C05A33A3C3600437844730D87E2" Guid="{1BC6CC8E-0457-4E39-9131-EC3C9DD4C3E4}">
+                <File Id="filC8A02F3D65EF63899ED2FE30A4CA3C62" KeyPath="yes" Source="$(var.LPCFolder)\Thermo.CMDI.IpcCommunications.Client.exe" />
+            </Component>
+            <Component Id="cmp818B322B932AAF132E7A6096723D054D" Guid="{883BC304-4B93-4E9E-8A8F-B629AD584937}">
+                <File Id="fil89E3DD6FB15BACFF7DF960046F840686" KeyPath="yes" Source="$(var.LPCFolder)\Thermo.CMDI.IpcCommunications.Client.pdb" />
+            </Component>
+            <Component Id="cmp027C2439EDDE01D8CE87C58A0A0F5907" Guid="{98E039FF-F4A9-41DA-9ED4-69E3FDD8901C}">
+                <File Id="fil81C3FD5D809C79BAD5D005FCEB6F2E5A" KeyPath="yes" Source="$(var.LPCFolder)\Thermo.CMDI.IpcCommunications.Client.runtimeconfig.json" />
+            </Component>
+            <Component Id="cmpAF77041E8B9DB9A80052F0594B848EB4" Guid="{23CD5C9A-D2D1-4CF6-A853-E6CC5E0382E7}">
+                <File Id="fil47273B418CE49F72F05DFC4209CE0EB3" KeyPath="yes" Source="$(var.LPCFolder)\Thermo.CMDI.IpcCommunications.Common.dll" />
+            </Component>
+            <Component Id="cmp1E99022ED6EC2E53AD6F673976C13776" Guid="{A7A9D91F-EFBE-4E23-B1F9-5AD774212321}">
+                <File Id="fil64DD72EB8C1B26EF1C37A1F3554D4E03" KeyPath="yes" Source="$(var.LPCFolder)\Thermo.CMDI.IpcCommunications.Common.pdb" />
+            </Component>
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <ComponentGroup Id="ElectronicsComponent">
+            <ComponentRef Id="cmpA0863526952F7834E7C922F065E4C8A8" />
+            <ComponentRef Id="cmpF82FCA80BBAF44D285C97F10993DEEE6" />
+            <ComponentRef Id="cmp2B62C064A3ED6A94B47BE64C5EB82D9E" />
+            <ComponentRef Id="cmpAD5EBB392A1420D45D001D2850650946" />
+            <ComponentRef Id="cmp332F189ABE775FB6B2F44FCB7028B9C6" />
+            <ComponentRef Id="cmp7530465017BB74DDEEFF284B43AFA164" />
+            <ComponentRef Id="cmp301336F2D44076B758CAAEAEFFD98B4B" />
+            <ComponentRef Id="cmp3F2D05E350EB9478FD924CAC5B831615" />
+            <ComponentRef Id="cmpD5921CC73D3D7D96B18ADAC140DDDBF5" />
+            <ComponentRef Id="cmp4FDAF4C5B0BA3EB0A9736F58F6BE9C14" />
+            <ComponentRef Id="cmp81015F934149FC8877A7F508324F01AF" />
+            <ComponentRef Id="cmp828BABCAA179DFEF8C123894E628FE4B" />
+            <ComponentRef Id="cmpFD16E629F3B1C17887ACD3B97583CB13" />
+            <ComponentRef Id="cmp6F76674123E31ADA0CB0373827395329" />
+            <ComponentRef Id="cmp74A2C73F11C177073B0A672936A0D5EB" />
+            <ComponentRef Id="cmp214710B2088B640AA2C8ECD80E170376" />
+            <ComponentRef Id="cmpA9CD02E2996345805AE749B403FD0E7A" />
+            <ComponentRef Id="cmpC08CEB1C24E4A6DA79EE83CFD8BDCD60" />
+            <ComponentRef Id="cmp0E9DAA4C1F27CA840B7893F6337CDC29" />
+            <ComponentRef Id="cmp539EB192BE11EA8C5B17EFB0CC1DDCEB" />
+            <ComponentRef Id="cmp54D178BF4B123B0F7249047E7AA7FE7F" />
+            <ComponentRef Id="cmp49818C715FF04B8E95F7B53BDDD323EF" />
+            <ComponentRef Id="cmp76AAA44D1FCBC2976B84875F1F6EFC4C" />
+            <ComponentRef Id="cmp3C5190B580EDFB87D0BC5E835BB950DE" />
+            <ComponentRef Id="cmp441B2521942CD82440C070D7FF9F0E80" />
+            <ComponentRef Id="cmp4BEE6BBF5C4B4A85E402D73F039EE742" />
+            <ComponentRef Id="cmpD5E85C05A33A3C3600437844730D87E2" />
+            <ComponentRef Id="cmp818B322B932AAF132E7A6096723D054D" />
+            <ComponentRef Id="cmp027C2439EDDE01D8CE87C58A0A0F5907" />
+            <ComponentRef Id="cmpAF77041E8B9DB9A80052F0594B848EB4" />
+            <ComponentRef Id="cmp1E99022ED6EC2E53AD6F673976C13776" />
+        </ComponentGroup>
+    </Fragment>
+</Wix>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+	<?include Include1.wxi ?>
+	<Fragment>
+		<Component Id='MainExecutable' Guid='{A3612513-E6FD-4A72-801B-6661948B1E1C}' Directory='TARGETDIR' KeyPath='yes' >
+
+			<!-- Here is the env -->
+			
+
+			<Environment Id="PATH" Name="EPATH" Value="[INSTALLFOLDER]" Permanent="no" Part="all" Action="set" System="yes" />
+			<Environment Id="PATHH" Name="EPATHH" Value="[ProgramFilesFolder]" Permanent="no" Part="all" Action="set" System="no" />
+			<Environment Id="Name" Name="EName" Value="!(loc.Name)" Permanent="no" Part="all" Action="set" System="yes" />
+			<Environment Id="Version" Name="EVersion" Value="$(var.Version)" Permanent="no" Part="all" Action="set" System="yes" />
+			<Environment Id="Manufacturer" Name="EManufacturer" Value="!(loc.Manufacturer)" Permanent="no" Part="all" Action="set" System="no" />
+			<Environment Id="UpgradeCode" Name="EUpgradeCode" Value="$(var.UpgradeCode)" Permanent="no" Part="all" Action="set" System="yes" />
+			<Environment Id="Exe" Name="Exe" Value="Thermo.CMDI.IpcCommunications.Client.exe" Permanent="no" Part="all" Action="set" System="yes" />
+
+
+
+
+
+		</Component>
+	</Fragment>
+</Wix>
+
+

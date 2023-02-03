@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+	<Fragment>
+	<!--<Binary Id="CA_DLL"  SourceFile="C:\Users\deekshith.bc\source\repos\Deletedll\bin\Debug\Deletedll.CA.dll" />
+		<CustomAction Id="CustomAction1" BinaryKey="CA_DLL" 
+			 DllEntry="CustomAction1" 
+					  Execute="deferred"--> 
+					  <!--Return="check"/><InstallExecuteSequence><Custom Action="CustomAction1" Before="InstallFinalize"> NOT Installed</Custom></InstallExecuteSequence>-->
+	</Fragment>
+</Wix>

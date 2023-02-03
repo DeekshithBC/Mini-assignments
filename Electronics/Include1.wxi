@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Include>
+	<!-- fixed id-->
+	<?define  Version="3.0.0.0"?>
+	<?define  UpgradeCode="{2697B4E8-EB1A-4026-A036-240D01026996}"?>
+	
+</Include>
