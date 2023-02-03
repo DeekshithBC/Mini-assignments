@@ -1,0 +1,1 @@
+sampple exaple to create a shortcuts,add logo , add files,create a shortcut 
