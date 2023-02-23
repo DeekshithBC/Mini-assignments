@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" InitialTargets="EnsureWixToolsetInstalled" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>3.10</ProductVersion>
+    <ProjectGuid>108330cf-d478-4c7b-8453-cc28308df5a7</ProjectGuid>
+    <SchemaVersion>2.0</SchemaVersion>
+    <OutputName>PROXY</OutputName>
+    <OutputType>Package</OutputType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <OutputPath>bin\$(Configuration)\</OutputPath>
+    <IntermediateOutputPath>obj\$(Configuration)\</IntermediateOutputPath>
+    <DefineConstants>Debug</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\$(Configuration)\</OutputPath>
+    <IntermediateOutputPath>obj\$(Configuration)\</IntermediateOutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Product.wxs" />
+  </ItemGroup>
+  <Import Project="$(WixTargetsPath)" Condition=" '$(WixTargetsPath)' != '' " />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\WiX\v3.x\Wix.targets" Condition=" '$(WixTargetsPath)' == '' AND Exists('$(MSBuildExtensionsPath32)\Microsoft\WiX\v3.x\Wix.targets') " />
+  <Target Name="EnsureWixToolsetInstalled" Condition=" '$(WixTargetsImported)' != 'true' ">
+    <Error Text="The WiX Toolset v3.11 (or newer) build tools must be installed to build this project. To download the WiX Toolset, see http://wixtoolset.org/releases/" />
+  </Target>
+  <Target Name="BeforeBuild">
+    <!--<HeatDirectory
+		   OutputFile="C:\Users\deekshith.bc\source\repos\Proxy client\Components.wxs"
+		   Directory="..\Training.Wix.SampleSite"
+		   ComponentGroupName="ProductFilesComponentGroup"
+		   DirectoryRefId="INSTALLLOCATION"
+		   AutogenerateGuids="true"
+		   PreprocessorVariable="var.Training.Wix.SampleSite.ProjectDir"
+		   SuppressRegistry="true"
+		   SuppressRootDirectory="true"
+		   ToolPath="C:\Program Files (x86)\WiX Toolset v3.11\bin"
+		   NoLogo="true" />-->
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  <PropertyGroup>
+    <PreBuildEvent>"C:\Program Files (x86)\WiX Toolset v3.11\bin\heat.exe" project "MyProj.csproj" -pog Binaries -pog Content -suid -directoryid INSTALLLOCATION -ag -template fragment -out "Files.wxs"</PreBuildEvent>
+  </PropertyGroup>
+</Project>
