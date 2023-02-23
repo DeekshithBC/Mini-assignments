@@ -1,0 +1,2 @@
+Resource\Sample Application.exe.config
+Resource\Sample Application.exe

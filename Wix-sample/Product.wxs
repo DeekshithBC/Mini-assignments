@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+
+	<!-- define the main product-->
+	<Product Id="{FFAC537E-F8CB-4C0B-95FB-68B3809254CF}"
+			 Name="sample"
+		Language="1033"
+		Version="1.0.0.0"
+			 Manufacturer="thermo"
+		UpgradeCode="{6941EBFC-65E7-4313-9737-BDB832790B15}">
+
+
+
+		<!--provides a package details-->
+		<Package InstallerVersion="200"
+					 Compressed="yes"
+		InstallScope="perMachine"
+		Manufacturer="thermo"/>
+
+
+		<!--Application logo-->
+		<Icon Id="thermo.ico"
+			  SourceFile="$(var.ProjectDir)..\..\..\Downloads\thermo.ico" />
+		<!--Application logo for Control Panel-->
+		<Property Id="ARPPRODUCTICON"
+				  Value="thermo.ico" />
+		<!-- Allow upgrades and prevent downgrades -->
+		<MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
+		<!--Embed Cabinet into single msi file-->
+		<Media Id="1" Cabinet="comm" EmbedCab="yes" />
+
+		<!-- Check if .Net Framework 4.5.2 version is installed or not. If not show message and exit-->
+		
+		<!--Main Feature for this Setup which can be found in Fragment Tag with ComponentGroupRef Id-->
+
+		<Feature Id="ProductFeature" Title="sample" Level="1">
+
+			<!--Main application executable component-->
+			<ComponentGroupRef Id="ProductComponents" />
+
+			<!--Main application shortcut for Program Menu-->
+			<ComponentRef Id="ApplicationShortcut" />
+			<!--Desktop shortcut-->
+			<ComponentGroupRef Id="ComponentGroupDesktopShortcut" />
+		</Feature>
+		<!-- Add CheckBox UI to your installer for running application on exit-->
+
+
+		<Directory Id="TARGETDIR" Name="SourceDir">
+			<Directory Id="ProgramFilesFolder">
+				<!-- Create a folder inside program files with Company Name-->
+				<Directory Id="ROOTDIRECTORY" Name="thermo">
+					<!-- Create a folder inside Company Name folder with Product Name-->
+					<Directory Id="INSTALLFOLDER" Name="thermo">
+						<Directory Id="DesktopFolder" Name="DesktopFolder" />
+					</Directory>
+				</Directory>
+
+			</Directory>
+
+
+			<!--Create application folder in Program Menu-->
+			<Directory Id="ProgramMenuFolder">
+				<Directory Id="ApplicationProgramsFolder" Name="thermo"/>
+			</Directory>
+		</Directory>
+
+		
+			<!--ComponentGroup refering to install component in INSTALLFOLDER Directory-->
+			<ComponentGroup Id="ProductComponents" Directory="INSTALLFOLDER">
+
+
+
+				<!--Main Component with Sample Application executable path-->
+				<Component Id="Electronics.exe" Guid="{E98B6788-A8EC-4DB3-8C77-722B7B48657B}">
+					<File Id="Electronics.exe" Name="Sample Application.exe" Source="Resource\Sample Application.exe" />
+					<!-- Remove all files from the INSTALLFOLDER on uninstall -->
+					<RemoveFile Id="ALLFILES" Name="electronic" On="both" />
+				</Component>
+				<!--Component with config file of sample application-->
+				<Component Id="Sample_Application.exe.config" Guid="{360B1676-216E-4CB5-ADB1-65C965C001DF}">
+					<File Id="Electronic.exe.config" Name="Sample.exe.config" Source="Resource\Sample Application.exe.config" />
+
+
+				</Component>
+			</ComponentGroup>
+
+
+
+
+
+		<DirectoryRef Id="ApplicationProgramsFolder">
+			<!--Create application shortcut in Program Menu-->
+			<Component Id="ApplicationShortcut" Guid="{27F777DF-1D61-455A-A399-95D012E0BE3B}">
+				<Shortcut Id="ApplicationStartMenuShortcut" Name="thermo"
+						  Description="electronics and coommnication"
+						  Icon="thermo.ico" Target="[INSTALLFOLDER]sample.exe"
+				WorkingDirectory="INSTALLFOLDER" />
+				<!--Remove application shortcut from Program Menu on uninstall-->
+				<RemoveFolder Id="ApplicationProgramsFolder" On="uninstall" />
+				<!--Create application registry entry-->
+				<RegistryValue Root="HKCU"
+							   Key="Software\Microsoft\dsatm\Electronics"
+							   Name="installed"
+							   Type="integer"
+							   Value="1" KeyPath="yes" />
+			</Component>
+		</DirectoryRef>
+				<!--Desktop Shortcut-->
+				<ComponentGroup Id="ComponentGroupDesktopShortcut">
+					<Component Id="ComponentDesktopShortcut"
+							   Guid="{F06D1FE8-21E1-46A9-9042-6CA0DFF1C2B1}"
+							   Directory="DesktopFolder" >
+						<Shortcut Id="AppDesktopShortcut"
+								  Icon="thermo.ico"  Name="sample"
+								  Description="electronic and communication"
+								  Target="[DesktopFolder]sample.exe"
+								  Directory="DesktopFolder"
+						  
+								  WorkingDirectory="INSTALLFOLDER"/>
+						<!--Remove desktop shortcut on uninstall-->
+						<RemoveFolder Id="DesktopFolder" On="uninstall"/>
+						<RegistryValue Root="HKCU" Key="Software\dsatm\Electronics"
+									   Name="installed"
+									   Type="integer" Value="1"
+									   KeyPath="yes" />
+
+					</Component>
+				</ComponentGroup>
+			
+	
+		
+				
+		
+		
+	</Product>
+</Wix>
